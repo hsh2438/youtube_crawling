@@ -20,7 +20,7 @@ while True:
         break
 
 # save
-with open('korean_top_250_youtuber.tsv', 'w', encoding='utf-8') as fw:
+with open('top_250_youtuber.tsv', 'w', encoding='utf-8') as fw:
     for item in items:
         name = item.find('td', attrs={'class':'profile'}).find('span')['title']
         address = item.find('td', attrs={'class':'profile'}).find('a', href=True)['href']
