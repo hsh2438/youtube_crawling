@@ -1,7 +1,10 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup
 
-driver = webdriver.Chrome('chromedriver')
+options = webdriver.ChromeOptions()
+options.add_argument('headless')
+
+driver = webdriver.Chrome('chromedriver', options=options)
 
 driver.get('https://kr.noxinfluencer.com/youtube-channel-rank/top-250-all-all-youtuber-sorted-by-subs-weekly')
 
@@ -18,6 +21,8 @@ while True:
     items = get_items()
     if len(items) == 250:
         break
+
+driver.quit()
 
 # save
 with open('top_250_youtuber.tsv', 'w', encoding='utf-8') as fw:
