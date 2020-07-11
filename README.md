@@ -1,10 +1,12 @@
 # youtube crawling
 
 ## requirements
+selenium
+beautifulsoup4
 
     pip install -r requirements.txt
 
-download chromedriver from following link <br>
+download chromedriver for selenium from following link <br>
 https://chromedriver.chromium.org/downloads
 
 ## crawling channel list
