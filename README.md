@@ -1,7 +1,7 @@
 # youtube crawling
 
 ## requirements
-selenium
+selenium <br>
 beautifulsoup4
 
     pip install -r requirements.txt
